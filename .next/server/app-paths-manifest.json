@@ -1,0 +1,10 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/page": "app/page.js",
+  "/academics/pre-primary/page": "app/academics/pre-primary/page.js",
+  "/gallery/page": "app/gallery/page.js",
+  "/transport/page": "app/transport/page.js",
+  "/stanford-pathway/page": "app/stanford-pathway/page.js",
+  "/sports-clubs/page": "app/sports-clubs/page.js",
+  "/facilities/page": "app/facilities/page.js"
+}

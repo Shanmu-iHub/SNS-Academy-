@@ -1,286 +1,143 @@
-SNS Academy Website – Next.js Migration
+# 🎓 SNS Academy – Next.js Migration 🚀
 
-Project Overview
+![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=for-the-badge&logo=typescript)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?style=for-the-badge&logo=tailwind-css)
+![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react)
 
-This project is the official SNS Academy website migrated from:
-	•	Hono
-	•	TypeScript
-	•	Cloudflare Pages
-	•	TailwindCSS
-	•	Font Awesome
+> **India's First GenAI-Powered Design Thinking CBSE School (Patented).**  
+> A premium educational institution website migrated to a modern, high-performance stack.
 
-To:
-	•	Next.js (Latest Stable – App Router)
-	•	TypeScript
-	•	TailwindCSS
-	•	Font Awesome
-	•	Deployment Target: Hostinger (Node.js Hosting / VPS)
+---
 
-This migration strictly preserves the original design.
+## 🌟 Project Overview
 
-No changes were made to:
-	•	Layout
-	•	UI structure
-	•	Colors
-	•	Tailwind classes
-	•	Font sizes
-	•	Spacing
-	•	Images
-	•	Icons
-	•	Design system
-	•	Responsive behavior
+This project is the official website for **SNS Academy**, meticulously migrated from a legacy Hono/Cloudflare stack to the latest **Next.js App Router** architecture. 
 
-The final result is 100% visually identical to the original production website.
+The migration ensures:
+- ⚡ **Maximum Performance**: Optimized Core Web Vitals via Next.js.
+- 🎨 **Visual Parity**: 100% preservation of the original premium design.
+- 🛠️ **Maintainability**: Fully typed with TypeScript and modularized components.
+- 📦 **Deployment Ready**: Optimized for Hostinger Node.js and VPS environments.
 
-⸻
+---
 
-Migration Objective
+## 🛠️ Tech Stack
 
-The objective of this migration:
-	•	Remove Cloudflare Pages completely
-	•	Replace Hono routing with Next.js routing
-	•	Convert API endpoints to Next.js API routes
-	•	Prepare the project for Hostinger Node.js hosting
-	•	Maintain full functionality without UI redesign
+| Category | Technology |
+| :--- | :--- |
+| **Framework** | [Next.js 15 (App Router)](https://nextjs.org/) |
+| **Language** | [TypeScript](https://www.typescriptlang.org/) |
+| **Styling** | [Tailwind CSS](https://tailwindcss.com/) & Vanilla CSS |
+| **Animations** | Custom CSS Animations & Transitions |
+| **Icons** | [Font Awesome 6](https://fontawesome.com/) |
+| **Deployment** | [Hostinger](https://www.hostinger.com/) (Node.js/VPS) |
 
-⸻
+---
 
-Tech Stack
+## ✨ Core Pillars & Features
 
-Frontend:
-	•	Next.js (App Router)
-	•	TypeScript
-	•	TailwindCSS
-	•	Font Awesome
+### 🧠 Design Thinking & Innovation
+- **GenAI-Powered Framework**: Patented educational approach using Generative AI.
+- **SNS Innovation Hub (iHub)**: Access to cutting-edge labs (AI, IoT, Robotics, AR/VR).
+- **Stanford Pathway**: Guidance from Stanford Alumni for elite university preparation.
 
-Backend:
-	•	Next.js API Routes (app/api)
+### 🏫 Academic Excellence
+- **Holistic Development**: Nursery to Grade XII CBSE curriculum.
+- **3P Culture**: Focused on Purpose, Process, and People.
+- **Personalized Care**: Ultra-low 10:1 student-teacher ratio.
 
-Deployment:
-	•	Hostinger Node.js Hosting or VPS
-	•	next build + next start
+### 🏟️ World-Class Infrastructure
+- **SPINE Center**: 5-level activity center with swimming pool, studios, and theater.
+- **Modern Campus**: Safe and technology-integrated learning environment.
 
-⸻
+---
 
-Project Folder Structure
+## 📁 Project Structure
 
+```bash
 sns-academy/
+├── app/                  # Next.js App Router directory
+│   ├── academics/        # Academic program pages
+│   ├── admissions/       # Admissions & application flow
+│   ├── api/              # Server-side API routes
+│   ├── components/       # Shared UI components
+│   ├── layout.tsx        # Global layout & SEO metadata
+│   └── globals.css       # Core design system & animations
+├── public/               # Static assets (images, icons)
+├── components/           # Reusable functional components
+├── next.config.mjs       # Next.js configuration
+├── tailwind.config.ts    # Tailwind CSS configuration
+└── tsconfig.json         # TypeScript configuration
+```
 
-app/
-layout.tsx
-page.tsx
-about/page.tsx
-contact/page.tsx
-api/contact/route.ts
+---
 
-components/
-Header.tsx
-Footer.tsx
-Navbar.tsx
+## 🔄 Migration Highlights
 
-public/
-images/
-icons/
-assets/
+This project recently underwent a significant architecture shift:
+- **Hono to Next.js**: Replaced Hono routing with Next.js App Router for better SEO and React integration.
+- **Serverless to Node.js**: Shifted from Cloudflare Pages to a Node.js-friendly architecture suitable for Hostinger.
+- **API Conversion**: Converted standard Hono endpoints to Next.js API Routes (`/api/*`).
+- **Architecture**: Decoupled frontend components from back-end logic for improved modularity.
 
-styles/
-globals.css
+---
 
-.env.example
-next.config.js
-tailwind.config.ts
-tsconfig.json
-package.json
-README.md
+## 🚀 Getting Started
 
-⸻
-
-Routing Migration
-
-Old:
-Hono-based routing
-
-New:
-Next.js App Router
-
-Examples:
-
-app/page.tsx → /
-app/about/page.tsx → /about
-app/contact/page.tsx → /contact
-
-Multipage routing works using Next.js native routing system.
-
-⸻
-
-API Migration
-
-All Hono endpoints were converted to:
-
-app/api//route.ts
-
-Example:
-
-export async function POST(request: Request) {
-const body = await request.json();
-return Response.json({ success: true });
-}
-
-⸻
-
-Rendering Strategy
-
-Static pages → SSG (default Next.js behavior)
-Dynamic pages → SSR when required
-API routes → Server-side execution
-
-⸻
-
-Environment Variables
-
-Create .env.local based on:
-
-.env.example
-
-Example:
-
-NEXT_PUBLIC_API_URL=
-EMAIL_SERVICE_KEY=
-DATABASE_URL=
-
-⸻
-
-Installation Guide
-	1.	Clone repository
-
-git clone 
-cd sns-academy
-	2.	Install dependencies
-
+### 1. Clone & Install
+```bash
+git clone https://github.com/Balasurya555/SNS-School-main.git
+cd SNS-School-main
 npm install
-	3.	Configure environment variables
+```
 
-Create .env.local and add required variables.
-	4.	Run development server
+### 2. Environment Setup
+Create a `.env.local` file in the root:
+```env
+NEXT_PUBLIC_API_URL=your_api_url
+# Add other necessary keys here
+```
 
+### 3. Development
+```bash
 npm run dev
+```
+Explore the site at `http://localhost:3000`.
 
-Open:
-http://localhost:3000
+---
 
-⸻
+## 🏗️ Production & Deployment
 
-Production Build
-
-Build project:
-
+### Build the Project
+```bash
 npm run build
+```
 
-Start production server:
+### Hostinger Deployment (Recommended)
+1. **Prepare**: Run `npm run build` locally or on the server.
+2. **Setup**: In Hostinger hPanel, create a Node.js Application.
+3. **Configure**: Set the entry point to `.next/standalone/server.js` or use `next start`.
+4. **PM2**: (For VPS) Use PM2 for process management:
+   ```bash
+   pm2 start npm --name "sns-academy" -- start
+   ```
 
-npm run start
+---
 
-⸻
+## 📜 Metadata & SEO
+SEO is baked into the architecture using Next.js Metadata API.
+- **Dynamic Titles**: Page-specific titles for better ranking.
+- **Semantic HTML**: Proper heading hierarchy and accessibility.
+- **Performance**: Optimized images and code-splitting.
 
-package.json Scripts
+---
 
-“scripts”: {
-“dev”: “next dev”,
-“build”: “next build”,
-“start”: “next start”,
-“lint”: “next lint”
-}
+## ⚖️ License & Proprietary Information
+© **SNS Academy**. All rights reserved.  
+Branding, design assets, and proprietary "GenAI-Powered Design Thinking" frameworks are property of SNS Academy.
 
-⸻
-
-Deployment Guide – Hostinger
-
-Option 1: Hostinger Node.js Hosting
-	1.	Login to Hostinger hPanel
-	2.	Create a Node.js Application
-	3.	Set Node version (18+)
-	4.	Upload project files (exclude node_modules)
-	5.	Run:
-
-npm install
-npm run build
-npm run start
-	6.	Configure environment variables in Hostinger dashboard
-
-⸻
-
-Option 2: VPS Deployment
-
-Install Node.js 18+
-
-Upload project:
-
-git clone 
-cd sns-academy
-npm install
-npm run build
-npm run start
-
-Optional: Use PM2
-
-npm install -g pm2
-pm2 start npm –name “sns-academy” – start
-pm2 save
-pm2 startup
-
-⸻
-
-Static Export (If Required)
-
-In next.config.js:
-
-output: “export”
-
-Then run:
-
-npm run build
-
-Upload the out/ folder to Hostinger.
-
-⸻
-
-Testing Checklist
-	•	All routes load correctly
-	•	Multipage routing works
-	•	Responsive design unchanged
-	•	Font Awesome icons render properly
-	•	Tailwind styling identical
-	•	Forms and APIs working
-	•	SEO metadata preserved
-
-⸻
-
-SEO Support
-	•	Metadata handled via layout.tsx
-	•	Page-level metadata supported
-	•	Proper title and description configuration
-
-⸻
-
-Architecture Summary
-	•	Clean reusable components
-	•	Fully TypeScript-based
-	•	Production-ready
-	•	Optimized for Hostinger deployment
-	•	No UI redesign
-	•	Pure architecture migration
-
-⸻
-
-License
-
-This project belongs to SNS Academy.
-All design assets and branding remain proprietary.
-
-⸻
-
-Important Notes:
-
-Do NOT modify Tailwind classes unless technically required.
-Do NOT redesign layout.
-Maintain visual parity with original production site.
+---
+<p align="center">
+  Made with ❤️ for SNS Academy
+</p>
