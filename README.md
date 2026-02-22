@@ -1,403 +1,286 @@
-# SNS Academy - Modern Website Redesign
+SNS Academy Website – Next.js Migration
 
-## Project Overview
-- **Name**: SNS Academy Website
-- **Goal**: Complete redesign of 12-year-old CBSE school website with modern, parent-friendly design
-- **Status**: ✅ **COMPREHENSIVE MULTI-PAGE SITE COMPLETE**
-- **Tech Stack**: Hono + TypeScript + Cloudflare Pages + TailwindCSS + Font Awesome
-- **Established**: 2014 | **CBSE Affiliation**: 1930610
+Project Overview
 
-## 🌐 Live URLs
-- **Development**: https://3000-iuq2q2xgmw9hju98ek9x6-d0b9e1e2.sandbox.novita.ai
-- **Production**: *Ready for deployment*
-- **GitHub**: *Ready to push*
+This project is the official SNS Academy website migrated from:
+	•	Hono
+	•	TypeScript
+	•	Cloudflare Pages
+	•	TailwindCSS
+	•	Font Awesome
 
-## ✅ Completed Features
+To:
+	•	Next.js (Latest Stable – App Router)
+	•	TypeScript
+	•	TailwindCSS
+	•	Font Awesome
+	•	Deployment Target: Hostinger (Node.js Hosting / VPS)
 
-### **Pages (10 comprehensive pages)**
-1. **Home** (`/`) - Modern landing page with hero, trust signals, why choose us
-2. **Pre-Primary** (`/academics/pre-primary`) - Nursery to UKG programs
-3. **Primary** (`/academics/primary`) - Grade I-VI curriculum
-4. **Secondary** (`/academics/secondary`) - Grade VII-X programs
-5. **Senior Secondary** (`/academics/senior-secondary`) - Grade XI-XII with streams
-6. **Facilities** (`/facilities`) - SPINE Center & Academic Infrastructure
-7. **Innovation Hub** (`/innovation`) - SNS iHub, RADICAL Technologies
-8. **Gallery** (`/gallery`) - Campus infrastructure, labs, facilities
-9. **Sports & Clubs** (`/sports-clubs`) - 25+ activities, all sports facilities
-10. **About Us** (`/about`) - Mission, vision, 3P Culture, 5 Pillars
-11. **Contact** (`/contact`) - Forms, maps, contact details
-12. **Admissions** (`/admissions`) - Application process, fees structure
-13. **Brochure** (`/brochure`) - Digital brochure download page
+This migration strictly preserves the original design.
 
-### **Content Integration**
-✅ All original site content integrated:
-- EZ Vidya Chrysalis curriculum (Pre-Primary)
-- CBSE curriculum details (all levels)
-- SPINE Activity Center facilities (Swimming, Cricket, Gym, Music, Dance, Art, Theater, Gaming, Restaurant, Lounge)
-- SNS iHub labs (I-TECH, BOT Lab, Piston Factory, Product Design, Manufacturing)
-- RADICAL Technologies (Robotics, AR/VR, Data Science, IoT, Cybersecurity, Communication, Additive Manufacturing, Low Code)
-- 3P Culture (Purpose, Process, People)
-- 5 Pillars (Learning, Upskilling & Communication, Innovation, Networking, Character Building)
-- SNS Motto: Sincerity, Nobility, Service
-- SNS Tagline: Redesigning Common Minds
-- Contact: +91 422 439 0470, info@snsacademy.org
-- Address: Vellakinar, Coimbatore, Tamil Nadu
+No changes were made to:
+	•	Layout
+	•	UI structure
+	•	Colors
+	•	Tailwind classes
+	•	Font sizes
+	•	Spacing
+	•	Images
+	•	Icons
+	•	Design system
+	•	Responsive behavior
 
-### **Sports & Clubs (Complete)**
-✅ Major Sports Facilities:
-- Football, Tennis & Table Tennis, Cricket (Indoor Center)
-- Basketball, Volleyball, Athletics, Swimming (Ozonized Pool)
-- Gym & Fitness, Kabaddi, Kho-Kho, Scouts & Guides
+The final result is 100% visually identical to the original production website.
 
-✅ 25+ Clubs & Activities:
-- Music Club, Dance Club, Art Club, Drama Club
-- Robotics Club, Chess Club, Literary Club, Science Club
-- Eco Club, Language Club (Hindi, Tamil, French)
-- Photography Club, Student Council
+⸻
 
-### **Infrastructure Details**
-✅ Campus Facilities:
-- Smart Classrooms with LCD, Smart Boards, Projectors
-- Wi-Fi enabled campus
-- Chemistry, Physics, Biology, Computer, Maths, Language Labs
-- Library, Auditorium, Hostel facilities
-- Reception, Pre-KG, LKG, UKG classrooms
-- A Block, B Block, C Block (Academic wings)
-- Tennis Court, Board Room, VIP Dining
-- CCTV Security (24/7), Solar Powered Campus
-- Transport Service
+Migration Objective
 
-✅ Play Areas:
-- Play Houses, Aquatics, Mazes, Jungle Gym
+The objective of this migration:
+	•	Remove Cloudflare Pages completely
+	•	Replace Hono routing with Next.js routing
+	•	Convert API endpoints to Next.js API routes
+	•	Prepare the project for Hostinger Node.js hosting
+	•	Maintain full functionality without UI redesign
 
-✅ Executive Lounge (SLUSH):
-- Video Gaming, Entertainment, Motivational environment
+⸻
 
-### **Design Features**
-✅ Modern UI/UX:
-- Vibrant gradients and color schemes
-- Mobile-first responsive design
-- Animated hero sections
-- Card hover effects
-- Sticky navigation with dropdowns
-- **⭐ Floating brochure button** (right side, swinging animation, visible on all pages)
-- Floating mobile CTA button
-- Icon-based visual hierarchy
-- Professional typography (Inter + Poppins)
+Tech Stack
 
-✅ Navigation:
-- Desktop menu with Academics dropdown
-- Mobile hamburger menu
-- Active page highlighting
-- Quick access to Apply Now CTA
+Frontend:
+	•	Next.js (App Router)
+	•	TypeScript
+	•	TailwindCSS
+	•	Font Awesome
 
-✅ Footer:
-- Social media links (Facebook, Instagram, YouTube)
-- Quick links to all pages
-- Contact information
-- SNS motto and tagline
+Backend:
+	•	Next.js API Routes (app/api)
 
-### **Social Media Integration**
-✅ Official Handles:
-- Facebook: https://www.facebook.com/snsinstitutions
-- Instagram: https://www.instagram.com/snsacademyorg
-- YouTube: https://www.youtube.com/@snsinstitutions
-- Twitter: https://twitter.com/snsinstitutions
-- LinkedIn: https://www.linkedin.com/school/snsinstitutions
+Deployment:
+	•	Hostinger Node.js Hosting or VPS
+	•	next build + next start
 
-### **Digital Brochure**
-✅ Brochure Page:
-- Direct link to https://snsacademy.org/brochure/
-- Download and View Online options
-- Contact info for printed copies
+⸻
 
-✅ **⭐ Floating Brochure Button** (NEW!):
-- Always visible on right side of ALL pages
-- Swinging animation to attract attention
-- Vertical text: "Download Brochure"
-- Direct link to official brochure PDF
-- Red/pink gradient design for high visibility
+Project Folder Structure
 
-### **Transport Services** (⭐ NEW!)
-✅ Comprehensive Transport Page:
-- **Fleet Details**: 20 air-conditioned buses
-- **Safety Features**: 
-  - GPS tracking system
-  - RFID cards for secure boarding
-  - Speed Governor installed
-  - First aid box in every bus
-  - Trained caretakers
-  - CCTV surveillance
-- **Bus Route Coverage Areas**:
-  - **Central Coimbatore**: RS Puram, Race Course, Town Hall, Gandhipuram, Saibaba Colony
-  - **East Coimbatore**: Peelamedu, Hopes College, Singanallur, Ramanathapuram, Ganapathy
-  - **West & South**: Vadavalli, Thudiyalur, Podanur, Ukkadam, Kuniyamuthur
-- **Transport Rules**: Detailed guidelines for parents and students
-- **Schedule**: Buses ensure arrival by 8:15 AM daily
-- **CTA**: "Check if your area is covered" with contact options
+sns-academy/
 
-**⚠️ Parent Decision Point**: Route coverage clearly displayed to help parents decide based on pickup/drop locations
+app/
+layout.tsx
+page.tsx
+about/page.tsx
+contact/page.tsx
+api/contact/route.ts
 
-### **Functional APIs**
-✅ Backend Routes:
-- `/api/admission-inquiry` - Form submission handler
-- All static pages with clean routing
-- Ready for email integration
+components/
+Header.tsx
+Footer.tsx
+Navbar.tsx
 
-## 📷 Images & Visual Content
+public/
+images/
+icons/
+assets/
 
-### **Current Status**
-⚠️ **Using Icon-Based Design Instead of Photos**
-Due to CORS restrictions and hosting limitations, the current website uses:
-- **Font Awesome icons** as primary visual elements
-- **Gradient backgrounds** for visual appeal
-- **Color-coded sections** for different content areas
-- **Card-based layouts** with hover effects
+styles/
+globals.css
 
-### **Real Student Photos Available At**
-📸 **SNS Academy Instagram**: https://www.instagram.com/snsacademyorg/
-- 1.5K followers, 307+ posts
-- Recent student activities, events, campus life
-- Real classroom and facility photos
-- Achievement celebrations
+.env.example
+next.config.js
+tailwind.config.ts
+tsconfig.json
+package.json
+README.md
 
-### **How to Add Real Images (For Future Updates)**
-When hosting allows, replace icon placeholders with:
+⸻
 
-1. **Hero Section** - Happy students in classroom/campus
-2. **Academic Sections** - Students learning in different age groups
-3. **Facilities Gallery** - Actual photos from:
-   - Smart Classrooms (LCD screens, Smart Boards)
-   - Swimming Pool (Ozonized)
-   - Indoor Cricket Center
-   - Laboratories (Chemistry, Physics, Biology, Computer)
-   - Music Studio, Dance Studio, Art Room
-   - Bioskop Theater, Gaming Arena
-   - Play Areas (Play Houses, Aquatics, Mazes, Jungle Gym)
+Routing Migration
 
-4. **Sports & Activities** - Students participating in:
-   - Football, Basketball, Volleyball matches
-   - Swimming lessons, Gym sessions
-   - Music, Dance, Drama performances
-   - Robotics projects, Science experiments
+Old:
+Hono-based routing
 
-5. **Events & Achievements** - Student success stories
+New:
+Next.js App Router
 
-**Image Placement Locations** (Ready for real photos):
-```typescript
-// Replace icon divs with actual images:
-<img src="/static/images/hero-students.jpg" alt="Happy students" />
-<img src="/static/images/facilities/swimming-pool.jpg" alt="Swimming pool" />
-<img src="/static/images/sports/football.jpg" alt="Football field" />
-```
+Examples:
 
-## 🎨 Design Philosophy
+app/page.tsx → /
+app/about/page.tsx → /about
+app/contact/page.tsx → /contact
 
-### **Design Thinking Alignment**
-✅ **3P Culture** (Purpose, Process, People):
-- **Purpose**: Help parents make quick admission decisions
-- **Process**: Simple navigation, clear information hierarchy
-- **People**: Focus on student outcomes and parent needs
+Multipage routing works using Next.js native routing system.
 
-✅ **5 Pillars** Integrated:
-1. **Learning** - Academic programs clearly presented
-2. **Upskilling & Communication** - Language labs, clubs
-3. **Innovation** - SNS iHub, RADICAL Technologies
-4. **Networking** - Social handles, community engagement
-5. **Character Building** - Sports, clubs, values
+⸻
 
-### **User Experience**
-✅ **Parent-Centric Design**:
-- Quick decision-making (< 2 minutes)
-- Trust signals upfront (CBSE affiliation, established 2014)
-- Clear differentiators (Design Thinking, 10:1 ratio, SPINE Center)
-- Multiple CTA buttons (Apply Now, Schedule Visit)
-- Easy navigation to key information
+API Migration
 
-✅ **Mobile-First**:
-- Responsive on all devices
-- Touch-friendly navigation
-- Floating CTA button on mobile
-- Optimized loading speed
+All Hono endpoints were converted to:
 
-## 📊 Data Architecture
+app/api//route.ts
 
-### **Storage Services**
-- **Content**: Static HTML/TypeScript served via Cloudflare Pages
-- **Forms**: Ready for backend integration (email/database)
-- **Assets**: CDN-based (Tailwind, Font Awesome, Google Fonts)
+Example:
 
-### **Data Flow**
-1. User visits site → Cloudflare Edge serves static pages
-2. Form submission → POST to `/api/admission-inquiry`
-3. Backend logs data, sends email (ready for integration)
+export async function POST(request: Request) {
+const body = await request.json();
+return Response.json({ success: true });
+}
 
-## 📝 Deployment Guide
+⸻
 
-### **Local Development**
-```bash
-cd /home/user/sns-academy
-npm run build
-pm2 start ecosystem.config.cjs
-```
+Rendering Strategy
 
-### **Test All Pages**
-```bash
-curl http://localhost:3000/
-curl http://localhost:3000/academics/pre-primary
-curl http://localhost:3000/facilities
-curl http://localhost:3000/gallery
-curl http://localhost:3000/sports-clubs
-curl http://localhost:3000/innovation
-curl http://localhost:3000/about
-curl http://localhost:3000/contact
-curl http://localhost:3000/admissions
-curl http://localhost:3000/brochure
-```
+Static pages → SSG (default Next.js behavior)
+Dynamic pages → SSR when required
+API routes → Server-side execution
 
-### **Production Deployment**
+⸻
 
-#### **1. Cloudflare Pages**
-```bash
-# Build
+Environment Variables
+
+Create .env.local based on:
+
+.env.example
+
+Example:
+
+NEXT_PUBLIC_API_URL=
+EMAIL_SERVICE_KEY=
+DATABASE_URL=
+
+⸻
+
+Installation Guide
+	1.	Clone repository
+
+git clone 
+cd sns-academy
+	2.	Install dependencies
+
+npm install
+	3.	Configure environment variables
+
+Create .env.local and add required variables.
+	4.	Run development server
+
+npm run dev
+
+Open:
+http://localhost:3000
+
+⸻
+
+Production Build
+
+Build project:
+
 npm run build
 
-# Deploy
-npx wrangler pages deploy dist --project-name sns-academy
-```
+Start production server:
 
-#### **2. GitHub**
-```bash
-# First, setup GitHub authentication
-# Call setup_github_environment tool
+npm run start
 
-# Then push
-git add .
-git commit -m "Complete SNS Academy website redesign"
-git remote add origin https://github.com/USERNAME/sns-academy.git
-git push -f origin main
-```
+⸻
 
-## 🚀 Next Steps (Quick Wins)
+package.json Scripts
 
-### **1. Add Real Photos (High Priority)**
-- Download images from SNS Academy Instagram
-- Place in `public/static/images/` directory
-- Update pages to use actual images instead of icons
-- Create image gallery with lightbox effect
+“scripts”: {
+“dev”: “next dev”,
+“build”: “next build”,
+“start”: “next start”,
+“lint”: “next lint”
+}
 
-### **2. Email Integration**
-- Connect admission form to email service (SendGrid, Mailgun)
-- Add confirmation emails for inquiries
-- Set up notification system for admin
+⸻
 
-### **3. WhatsApp Integration**
-- Add WhatsApp chat widget (+91 95664 23456)
-- Enable direct parent communication
+Deployment Guide – Hostinger
 
-### **4. SEO Optimization**
-- Add meta tags for all pages
-- Create sitemap.xml
-- Add robots.txt
-- Implement structured data (Schema.org)
+Option 1: Hostinger Node.js Hosting
+	1.	Login to Hostinger hPanel
+	2.	Create a Node.js Application
+	3.	Set Node version (18+)
+	4.	Upload project files (exclude node_modules)
+	5.	Run:
 
-### **5. Analytics**
-- Add Google Analytics
-- Track admission inquiries
-- Monitor page performance
+npm install
+npm run build
+npm run start
+	6.	Configure environment variables in Hostinger dashboard
 
-## 🎯 Future Enhancements
+⸻
 
-### **Phase 2 Features**
-- 📷 Photo gallery with lightbox and categories
-- 💬 Parent testimonials section
-- 🎥 Virtual campus tour (360° photos)
-- 📰 News & events blog section
-- 🌐 Multi-language support (Tamil, Hindi)
-- 📱 Mobile app (React Native / Flutter)
-- 🔐 Parent portal login
-- 📧 Newsletter subscription
-- 🎓 Alumni section
-- 📊 Student dashboard
+Option 2: VPS Deployment
 
-## 📞 Support & Contact
+Install Node.js 18+
 
-**Development Support:**
-- Project Path: `/home/user/sns-academy`
-- PM2 Service: `sns-academy`
-- Port: 3000
+Upload project:
 
-**SNS Academy Contact:**
-- Phone: +91 422 439 0470
-- Mobile: +91 96299 37861
-- WhatsApp: +91 95664 23456
-- Email: info@snsacademy.org
-- Address: Vellakinar, Coimbatore, Tamil Nadu
+git clone 
+cd sns-academy
+npm install
+npm run build
+npm run start
 
-**Social Media:**
-- Instagram: @snsacademyorg (1.5K+ followers)
-- Facebook: /snsinstitutions
-- YouTube: @snsinstitutions
+Optional: Use PM2
 
-## 🏆 Project Highlights
+npm install -g pm2
+pm2 start npm –name “sns-academy” – start
+pm2 save
+pm2 startup
 
-✅ **Complete multi-page website** (not single-page)
-✅ **All original content preserved and enhanced**
-✅ **Modern, vibrant design** with gradients and animations
-✅ **Mobile-responsive** and touch-friendly
-✅ **Fast loading** with CDN-based assets
-✅ **SEO-ready** structure
-✅ **Parent-focused** conversion design
-✅ **Design thinking principles** integrated
-✅ **SNS culture** (3P, 5 Pillars) emphasized
-✅ **Comprehensive facilities** documented
-✅ **Sports & clubs** detailed
-✅ **Gallery page** created
-✅ **Digital brochure** integrated
-✅ **Social media** connected
+⸻
 
-## 🎓 SNS Academy Unique Selling Points
+Static Export (If Required)
 
-1. **India's First Design Thinking CBSE School**
-2. **10:1 Student-Teacher Ratio** (Ultra-low for personalized attention)
-3. **60% Faculty with 10+ Years Experience**
-4. **World-Class SPINE Activity Center** (5 levels, 10+ facilities)
-5. **SNS iHub Access** (India's Y-Combinator equivalent)
-6. **RADICAL Technologies** (AI, IoT, Robotics, AR/VR labs)
-7. **3P Culture Framework** (Purpose, Process, People)
-8. **5 Pillars Development** (Holistic growth)
-9. **25+ Extra-Curricular Activities**
-10. **Established 2014** (12+ years of excellence)
+In next.config.js:
 
----
+output: “export”
 
-**Last Updated**: January 13, 2026
-**Status**: ✅ Ready for Production Deployment
-**Version**: 2.0 (Complete Redesign)
-**Build**: Hono + TypeScript + Cloudflare Pages
+Then run:
 
-## 🔧 Technical Stack
-- **Framework**: Hono (Edge-optimized)
-- **Runtime**: Cloudflare Workers
-- **Language**: TypeScript
-- **Styling**: TailwindCSS (CDN)
-- **Icons**: Font Awesome 6.4.0
-- **Fonts**: Google Fonts (Inter + Poppins)
-- **Deployment**: Cloudflare Pages
-- **Process Manager**: PM2 (development)
-- **Build Tool**: Vite
-- **Package Manager**: npm
+npm run build
 
-## 📈 Performance Metrics
-- **Page Load**: < 2s (Edge-optimized)
-- **Mobile Score**: 95+ (Lighthouse)
-- **Accessibility**: WCAG 2.1 AA compliant
-- **SEO**: Optimized structure
+Upload the out/ folder to Hostinger.
 
----
+⸻
 
-**Made with ❤️ using Design Thinking Principles**
-**SNS Motto**: Sincerity, Nobility, Service
-**SNS Tagline**: Redesigning Common Minds | We are Design Thinkers
-# SNS-Academy
-# SNS-School
+Testing Checklist
+	•	All routes load correctly
+	•	Multipage routing works
+	•	Responsive design unchanged
+	•	Font Awesome icons render properly
+	•	Tailwind styling identical
+	•	Forms and APIs working
+	•	SEO metadata preserved
+
+⸻
+
+SEO Support
+	•	Metadata handled via layout.tsx
+	•	Page-level metadata supported
+	•	Proper title and description configuration
+
+⸻
+
+Architecture Summary
+	•	Clean reusable components
+	•	Fully TypeScript-based
+	•	Production-ready
+	•	Optimized for Hostinger deployment
+	•	No UI redesign
+	•	Pure architecture migration
+
+⸻
+
+License
+
+This project belongs to SNS Academy.
+All design assets and branding remain proprietary.
+
+⸻
+
+Important Notes:
+
+Do NOT modify Tailwind classes unless technically required.
+Do NOT redesign layout.
+Maintain visual parity with original production site.
