@@ -5,7 +5,7 @@ module.exports = {
       script: 'server.js',
       env: {
         NODE_ENV: 'production',
-        PORT: 3000
+        PORT: 8080
       },
       watch: false,
       instances: 1,
